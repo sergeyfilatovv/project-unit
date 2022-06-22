@@ -1,0 +1,131 @@
+.package {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 300px;
+    height: auto;
+    
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    color: white;
+
+    text-align: center;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        width: 270px;
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        width: 300px;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        width: 290px;
+    }
+}
+
+.package--special{
+    background: rgba(48, 79, 254, 0.95);
+
+    & .package__title{
+        color:white;
+    }
+
+    & .package__period{
+        background: rgba(0, 0, 0, 0.1);
+
+    }
+}
+
+.package__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.package__title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #B2B2B2;
+}
+
+.package__price {
+    margin-bottom: 15px;
+
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 1;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.package__period {
+    display: inline-block;
+    height: 24px;
+    
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+
+    margin-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+
+    
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.package__list {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 58px;
+}
+
+.package__list-item {
+    width: 270px;
+    margin-bottom: 25px;
+
+   
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+
+    color: #FFFFFF;
+
+    &:last-child{
+        margin-bottom: 0;
+}
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        width: 240px;   
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        width: 260px;
+    }
+}

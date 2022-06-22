@@ -1,0 +1,132 @@
+.footer {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: #1A1A1A;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.footer__row {
+display: flex;
+justify-content: center;
+align-items: center;
+
+margin-bottom: 50px;
+
+/* Mobile */
+@media (max-width: 899px) {
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+/* Mobile XS */
+@media (max-width: 599px) {
+    margin-bottom: 40px;    
+}
+}
+
+.footer__row > * + *{
+    margin-left: 60px;
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        margin-top: 40px;
+
+    }
+}
+
+.footer__nav{
+   /* Mobile XS */
+   @media (max-width: 599px) {
+       display: flex;
+       flex-direction: column;
+   }
+}
+
+.footer__nav > * + *{
+    margin-left: 50px;
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        margin-left: 0;
+        margin-top: 20px;
+
+    }
+}
+
+.footer__nav-item {
+    text-decoration: none;
+    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    &:hover{
+        color: #00C470;
+    }
+    
+}
+
+.footer__socials {
+display: flex;
+
+}
+
+.footer__socials > * + *{
+    margin-left: 30px;
+}
+
+.footer__socials-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    background: rgba(196, 196, 196, 0.1);
+
+    &:hover{
+        background: #00C470;
+    }
+}
+
+.footer__copyright {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    
+    color: rgba(255, 255, 255, 0.3);
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        line-height: 1.5;
+    }
+}

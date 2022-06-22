@@ -1,0 +1,38 @@
+// base
+
+@import "./base/vars";
+@import "./base/mixins";
+@import "./base/base";
+
+// section
+
+@import "./section/header";
+@import "./section/functional";
+@import "./section/cta";
+@import "./section/tasks";
+@import "./section/focus";
+@import "./section/price";
+@import "./section/clients";
+@import "./section/footer";
+
+// blocks
+
+@import "./blocks/button-round";
+@import "./blocks/form";
+@import "./blocks/title";
+@import "./blocks/subtitle";
+@import "./blocks/card";
+@import "./blocks/package";
+@import "./blocks/button";
+@import "./blocks/button-outline";
+@import "./blocks/button-solid";
+@import "./blocks/slider";
+@import "./blocks/nav-icon";
+@import "./blocks/nav";
+
+
+
+
+// media
+
+@import "./media/media";

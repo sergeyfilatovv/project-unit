@@ -1,0 +1,158 @@
+.focus {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    overflow-x: hidden;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        padding-bottom: 0;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.focus__row {
+display: flex;
+justify-content: space-between;
+
+/* Mobile */
+@media (max-width: 899px) {
+    flex-direction: row-reverse;
+}
+
+/* Mobile XS */
+@media (max-width: 599px) {
+    flex-direction: column;
+    
+}
+
+.focus__row > *{
+    flex-shrink: 0;
+}
+
+}
+
+.focus__content {
+width: 470px;
+padding-top: 28px;
+
+/* Tablet */
+@media (max-width: 1199px) {
+width: 420px;
+padding-top: 12px;
+}
+
+/* Mobile */
+@media (max-width: 899px) {
+    width: 370px;
+    padding-top: 0;
+}
+
+/* Mobile XS */
+@media (max-width: 599px) {
+    width: 290px;
+
+    text-align: center;
+}
+
+}
+
+.focus__header {
+margin-bottom: 30px;
+
+/* Tablet */
+@media (max-width: 1199px) {
+    margin-bottom: 20px;
+}
+
+}
+
+.focus__title {
+margin-bottom: 30px;
+
+/* Tablet */
+@media (max-width: 1199px) {
+    margin-bottom: 20px;
+}
+
+/* Mobile */
+@media (max-width: 899px) {
+    font-size: 14px;
+}
+
+/* Mobile XS */
+@media (max-width: 599px) {
+    margin-bottom: 10px;
+}
+
+}
+
+.focus__text {
+    width: 400px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2.14;
+    
+    color: $paragraphColor;
+
+    & p{
+        margin-bottom: 15px;
+
+        /* Mobile XS */
+        @media (max-width: 599px) {
+            margin-bottom: 0;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        line-height: 1.71;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        width: 290px;
+        text-align: center;
+    }
+}
+
+.focus__img{
+    width: 570px;
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        width: 420px;
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        width: 170px;
+
+        img{
+            max-width: unset;
+            width: 415px;
+            height: auto;
+        }
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        width: 100%;
+        margin-bottom: 10px;
+
+        img{
+            max-width: 100%;
+        }
+    }
+
+}
