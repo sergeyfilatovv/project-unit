@@ -1,9 +1,27 @@
 const navIcon = document.querySelector('.nav-icon');
 const nav = document.querySelector('.nav');
+const searchButton = document.querySelector('.search__button');
+const searchForm = document.querySelector('.search');
 
+
+
+//Открытие формы поиска
+searchButton.addEventListener('click', function (e) {
+
+	if(!searchForm.classList.contains('search--visible')){
+
+		e.preventDefault();
+		searchForm.classList.toggle('search--visible');
+	}else{
+
+	}
+});
+//Трансформация кнопки в крестик
 navIcon.addEventListener('click', function () {
 	this.classList.toggle('nav-icon--active');
 	nav.classList.toggle('nav--active');
+	searchForm.classList.toggle('search--edit');
+
 });
 
 // Находим ссылки внутри мобильной навигации

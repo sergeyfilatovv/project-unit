@@ -218,10 +218,6 @@ legend {
   }
 }
 
-.header-buttons-search {
-  margin-left: auto;
-}
-
 .header-content {
   margin-bottom: 148px;
   /* Tablet */
@@ -1228,7 +1224,47 @@ legend {
   }
 }
 
-.button-round {
+.search {
+  position: relative;
+}
+
+.search.search--edit {
+  margin-left: auto;
+  z-index: 1;
+}
+
+.search__input {
+  width: 0px;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #FFFFFF;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 60px;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+.search__input::-webkit-input-placeholder {
+  color: rgba(46, 46, 46, 0.5);
+}
+.search__input:-ms-input-placeholder {
+  color: rgba(46, 46, 46, 0.5);
+}
+.search__input::-ms-input-placeholder {
+  color: rgba(46, 46, 46, 0.5);
+}
+.search__input::placeholder {
+  color: rgba(46, 46, 46, 0.5);
+}
+
+.search__button {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1243,11 +1279,44 @@ legend {
   border-radius: 50%;
   background-color: #fff;
   border: none;
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
 }
-
-.button-round:hover {
+.search__button:hover {
   cursor: pointer;
   background-color: #00c470;
+}
+.search__button:hover .search__icons-button {
+  stroke: #fff;
+}
+
+.search__icons-button {
+  stroke: #000000;
+  -webkit-transition: stroke 0.2s ease-in;
+  transition: stroke 0.2s ease-in;
+}
+
+.search.search--visible .search__input {
+  width: 340px;
+  padding-left: 30px;
+  padding-right: 70px;
+  /* Mobile XS */
+}
+@media (max-width: 599px) {
+  .search.search--visible .search__input {
+    width: 220px;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+}
+.search.search--visible .search__icons-button {
+  stroke: white;
+}
+.search.search--visible .search__button {
+  background: #00C470;
+}
+.search.search--visible .search__button:hover {
+  background: #15D784;
 }
 
 .header__form {
@@ -1858,6 +1927,8 @@ legend {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-transition: background-color 0.2s ease-in;
   transition: background-color 0.2s ease-in;
   cursor: pointer;
@@ -1959,6 +2030,7 @@ legend {
   opacity: 1;
   -webkit-transition: top 0s linear, opacity .2s ease-in;
   transition: top 0s linear, opacity .2s ease-in;
+  z-index: 2;
 }
 
 .nav__top {
