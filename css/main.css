@@ -1716,6 +1716,7 @@ legend {
 }
 
 .clients__slider {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 770px;
@@ -1765,9 +1766,22 @@ legend {
   height: 54px;
   border-radius: 50%;
   border: none;
-  background: #F5F5F5;
+  background-color: #F5F5F5;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
   /* Mobile XS */
+}
+.slider__arrow .slider__arrow-svg {
+  stroke: #00C470;
+  -webkit-transition: stroke 0.3s ease-in;
+  transition: stroke 0.3s ease-in;
+}
+.slider__arrow:hover {
+  background-color: #00C470;
+}
+.slider__arrow:hover .slider__arrow-svg {
+  stroke: #ffffff;
 }
 .slider__arrow--left {
   left: -30px;
@@ -2078,6 +2092,66 @@ legend {
 }
 .nav__list a:hover {
   color: #15D784;
+}
+
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.owl-theme .owl-nav [class*='owl-'] {
+  color: #FFF;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #E1E1E1;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: #00C470;
+  color: #FFF;
+  text-decoration: none;
+}
+.owl-theme .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 35px;
+  /* Mobile */
+}
+@media (max-width: 899px) {
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 25px;
+  }
+}
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 14px;
+  height: 14px;
+  margin: 5px 5px;
+  background: #E1E1E1;
+  display: block;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  border-radius: 50px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #00C470;
 }
 
 /* Tablet */

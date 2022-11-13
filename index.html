@@ -17,6 +17,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./libs/OwlCarousel2/assets/owl.carousel.min.css">
 
 		<!-- Open Graph -->
 		<!-- <meta property="og:url" content="https://webcademy.ru/" /> -->
@@ -267,21 +268,59 @@
 					<h3 class="subtitle">Что говорят пользователи</h3>
 				</header>
 				<div class="clients__slider">
-					<div class="slider">
-						<button class="slider__arrow slider__arrow--left">
-							<img src="./img/feather-icons/arrow-left.svg" alt="arrow-left">
-						</button>
-						<button class="slider__arrow slider__arrow--right">
-							<img src="./img/feather-icons/arrow-right.svg" alt="arrow-right">
-						</button>
-						<div class="slider__pagination">
-							<button class="slider__pagination-item"></button>
-							<button class="slider__pagination-item slider__pagination-item--active"></button>
-							<button class="slider__pagination-item"></button>
-							<button class="slider__pagination-item"></button>
-							<button class="slider__pagination-item"></button>
-						</div>
+					<button class="slider__arrow slider__arrow--left" id="PrevBtn">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g class="slider__arrow-svg">
+								<path d="M20 12H4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10 18L4 12L10 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</g>
+						</svg>
+					</button>
+					<button class="slider__arrow slider__arrow--right" id="NextBtn">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g class="slider__arrow-svg">
+								<path d="M4 12H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M14 6L20 12L14 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</g>
+						</svg>
+					</button>
+					<!-- <div class="slider__pagination">
+						<button class="slider__pagination-item"></button>
+						<button class="slider__pagination-item slider__pagination-item--active"></button>
+						<button class="slider__pagination-item"></button>
+						<button class="slider__pagination-item"></button>
+						<button class="slider__pagination-item"></button>
+					</div> -->
+					<div class="slider owl-carousel owl-theme" id="clients-slider">
 						<!-- slider-item -->
+						<div class="slider-item">
+							<div class="slider-item__text">
+								<p> Это потрясающее приложение которое помогло мне завершить все мои дела, и сделать дипломный проект раньше срока. </p>
+							</div>
+							<div class="slider-item__author">
+								<div class="slider-item__avatar">
+									<img src="./img/users/02.jpg.jpg" alt="avatar">
+								</div>
+								<div class="slider-item__author-desc">
+									<span class="slider-item__author-title">Фрилансер</span>
+									<span class="slider-item__author-name">Николай Остапов</span>
+								</div>
+							</div>
+						</div>
+						<div class="slider-item">
+							<div class="slider-item__text">
+								<p> Это потрясающее приложение которое помогло мне завершить все мои дела, и сделать дипломный проект раньше срока. </p>
+							</div>
+							<div class="slider-item__author">
+								<div class="slider-item__avatar">
+									<img src="./img/users/02.jpg.jpg" alt="avatar">
+								</div>
+								<div class="slider-item__author-desc">
+									<span class="slider-item__author-title">Фрилансер</span>
+									<span class="slider-item__author-name">Николай Остапов</span>
+								</div>
+							</div>
+						</div>
 						<div class="slider-item">
 							<div class="slider-item__text">
 								<p> Это потрясающее приложение которое помогло мне завершить все мои дела, и сделать дипломный проект раньше срока. </p>
@@ -321,6 +360,13 @@
 				</div>
 			</div>
 		</footer>
+		<!-- Подключение кастомного JS -->
 		<script src="./js/main.js"></script>
+		<!-- Подключение библиотеки jQuery -->
+		<script src="./libs/jquery-3.6.1.min.js"></script>
+		<!-- Подключение плагина OwlCarousel2 -->
+		<script src="./libs/OwlCarousel2/owl.carousel.min.js"></script>
+		<!-- Подключение скрипта карусели -->
+		<script src="./js/clients-carousel.js"></script>
 	</body>
 </html>
